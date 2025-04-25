@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./main.js"></script>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div id="top-bar">
+    <div id="contact-info">
+      <i id="email-icon" class="fas fa-envelope"></i> inquiries@movieticketslk.com
+    </div>
+    <div id="emergency-info">
+      <i id="search-icon" class="fas fa-search"></i> 
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <div id="main-header">
+    <div id="logo">
+      <img src="./pictures/logo.png" alt="Life Care Hospital Logo" width="70" height="70" />
+    </div>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="doctor'spage.html">Upcoming Movies</a></li>
+      <li><a href="services.html">Cinema Food stall and Food prices</a></li>
+      <li><a href="pharmacypage.html">Games</a></li>
+      <li><a href="consulting reservationpage.html">Queries and FAQs</a></li>
+      <li><a href="contactus.html">Checkout</a></li>
+    </ul>
+  </div>
+
+  <!-- Checkout Section -->
+  <div id="checkoutPage">
+    <h1>Checkout Page</h1>
+
+    <!-- Booking Summary -->
+    <section class="summary">
+      <h2>Your Booked Tickets</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Movie Name</th>
+            <th>Quantity</th>
+            <th>Price (Rs.)</th>
+            <th>Total (Rs.)</th>
+          </tr>
+        </thead>
+        <tbody id="checkoutItems"></tbody>
+      </table>
+      <h3 id="checkoutTotal"></h3>
+    </section>
+
+    <!-- Personal Info Form -->
+    <section class="form-section">
+      <h2>Enter Your Details</h2>
+      <form id="paymentForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="movieTime">Movie Time:</label>
+        <select id="movieTime" required>
+          <option value="">-- Select Time --</option>
+          <option value="10:00 AM">10:00 AM</option>
+          <option value="2:30 PM">2:30 PM</option>
+          <option value="7:30 PM">7:30 PM</option>
+        </select>
+
+        <label for="card">Card Number:</label>
+        <input type="text" id="card" required />
+
+        <input type="hidden" id="seats" />
+
+        <h2>Movie Seat Booking</h2>
+        <div class="seat-grid">
+          <button type="button" class="seat-btn" id="A1">A1</button>
+          <button type="button" class="seat-btn" id="A2">A2</button>
+          <button type="button" class="seat-btn" id="A3">A3</button>
+          <button type="button" class="seat-btn" id="A4">A4</button>
+          <button type="button" class="seat-btn" id="B1">B1</button>
+          <button type="button" class="seat-btn" id="B2">B2</button>
+          <button type="button" class="seat-btn" id="B3">B3</button>
+          <button type="button" class="seat-btn" id="B4">B4</button>
+          <button type="button" class="seat-btn" id="C1">C1</button>
+          <button type="button" class="seat-btn" id="C2">C2</button>
+          <button type="button" class="seat-btn" id="C3">C3</button>
+          <button type="button" class="seat-btn" id="C4">C4</button>
+          <button type="button" class="seat-btn" id="D1">D1</button>
+          <button type="button" class="seat-btn" id="D2">D2</button>
+          <button type="button" class="seat-btn" id="D3">D3</button>
+          <button type="button" class="seat-btn" id="D4">D4</button>
+        </div>
+
+        <p id="seatCounter">Seats Selected: 0 / 0</p>
+        <img src="./pictures/canvaseatsdesign.jpg" alt="Seating Chart" id="seat-image" />
+
+        <button type="button" id="payBtn">Pay Now</button>
+      </form>
+    </section>
+
+    <!-- Confirmation Message -->
+    <div id="confirmation" class="confirmation"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div id="footer-content">
+      <div id="footer-section-about">
+        <h3>About Movie TicketBooking</h3>
+        <p>"Thank you for choosing CineBook – your gateway to the ultimate movie experience!"</p>
+      </div>
+      <div id="footer-section-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./aboutus.html">About Us</a></li>
+          <li><a href="./services.html">Upcoming Movie</a></li>
+          <li><a href="./doctor'spage.html">Cinema Food stall and Food prices</a></li>
+          <li><a href="./consulting reservationpage.html">Games</a></li>
+          <li><a href="./pharmacypage.html">Queries and FAQs</a></li>
+        </ul>
+      </div>
+      <div id="footer-section-contact">
+        <h3>Contact Us</h3>
+        <p>Email: inquiries@movieticketslk.com</p>
+        <p>Phone: 00 9433 7831</p>
+        <p>Address: 123 Carnival Avenue, Jaffna.</p>
+      </div>
+      <div id="footer-section-social">
+        <h3>Follow Us</h3>
+        <p><img src="./pictures/facebookicon.png" alt="facebook" width="30" height="30" /></p>
+        <p><img src="./pictures/instagramicon.png" alt="instagram" width="30" height="30" /></p>
+        <p><img src="./pictures/twitericon.png" alt="twitter" width="30" height="30" /></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
