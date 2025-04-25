@@ -32,6 +32,7 @@ for (let i = 1; i <= 30; i++) {
   }
 }
 
+
 // Function to update the total price at bottom
 function updateTotalPrice() {
   const rows = document.querySelectorAll("#orderItems tr");
